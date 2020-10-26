@@ -2,11 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href="{{ asset('css/base.css') }}" rel="stylesheet"/>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    <body> 
+        <h1>Sistema XPTO</h1>
+        <div class="container" > 
+            <div class="content"> 
+                {% block body %}{% endblock %}
+                {% block javascripts %}{% endblock %}
+            </div>
+        </div>
     </body>
 </html>

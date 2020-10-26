@@ -18,24 +18,24 @@ class Cliente
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=255)
      */
     private $nome;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=2)
+     * @ORM\Column(type="string", length=255)
      */
-    private $sexo;
+    private $telefone;
 
     /**
-     * @ORM\Column(type="string", length=15)
+     * @ORM\Column(type="string", length=255)
      */
-    private $cpf;
+    private $cnpj;
 
     public function getId(): ?int
     {
@@ -66,26 +66,26 @@ class Cliente
         return $this;
     }
 
-    public function getSexo(): ?string
+    public function getTelefone(): ?string
     {
-        return $this->sexo;
+        return $this->telefone;
     }
 
-    public function setSexo(string $sexo): self
+    public function setTelefone(string $telefone): self
     {
-        $this->sexo = $sexo;
+        $this->telefone = $telefone;
 
         return $this;
     }
 
-    public function getCpf(): ?string
+    public function getCnpj(): ?string
     {
-        return $this->cpf;
+        return $this->cnpj;
     }
 
-    public function setCpf(string $cpf): self
+    public function setCnpj(string $cnpj): self
     {
-        $this->cpf = $cpf;
+        $this->cnpj = $cnpj;
 
         return $this;
     }

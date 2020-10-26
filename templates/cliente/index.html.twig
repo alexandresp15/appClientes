@@ -1,20 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ClienteController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/workspace/appClientes/src/Controller/ClienteController.php'|file_link(0) }}">src/Controller/ClienteController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/workspace/appClientes/templates/cliente/index.html.twig'|file_link(0) }}">templates/cliente/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <h1>Clientes</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Razão Social</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Cnpj</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliente in clientes %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.email }}</td>
+                <td>{{ cliente.telefone }}</td>
+                <td>{{ cliente.cnpj }}</td>
+                <td>
+                    <a href="{{ path('cliente_show', {'id': cliente.id}) }}">Mostrar</a>
+                    <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Clientes não encontrado!</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> 
+    <a href="{{ path('cliente_new') }}">Cadastrar</a>
 {% endblock %}
+
