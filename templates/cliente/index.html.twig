@@ -1,29 +1,32 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %} 
+    <link href="{{ asset('css/table.css') }}" rel="stylesheet"/> 
+{% endblock %}
 
 {% block body %}
-    <h1>Clientes</h1>
-    <table class="table">
+    <h2>Clientes</h2>
+    <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Razão Social</th>
                 <th>Email</th>
                 <th>Telefone</th>
                 <th>Cnpj</th>
-                <th>actions</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
         {% for cliente in clientes %}
             <tr>
-                <td>{{ cliente.id }}</td>
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.email }}</td>
                 <td>{{ cliente.telefone }}</td>
                 <td>{{ cliente.cnpj }}</td>
                 <td>
-                    <a href="{{ path('cliente_show', {'id': cliente.id}) }}">Mostrar</a>
-                    <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                    <p class="bt">
+                        <a href="{{ path('cliente_show', {'id': cliente.id}) }}">Mostrar</a>
+                        <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                    </p>
                 </td>
             </tr>
         {% else %}
@@ -33,6 +36,8 @@
         {% endfor %}
         </tbody>
     </table> 
-    <a href="{{ path('cliente_new') }}">Cadastrar</a>
+    <p class="link">
+        <a href="{{ path('cliente_new') }}">Cadastrar</a>
+    </p>
 {% endblock %}
 

@@ -1,11 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}New Cliente{% endblock %}
+{% block stylesheets %} 
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet"/> 
+{% endblock %}
 
 {% block body %}
-    <h1>Novo Cliente</h1>
-
-    {{ include('cliente/_form.html.twig') }}
-
-    <a href="{{ path('cliente_index') }}">Voltar</a>
+    <div class="formulario"> 
+    <h2>Novo Cliente</h2>
+        {{ include('cliente/_form.html.twig') }}
+        <p class="link">
+            <a href="{{ path('cliente_index') }}">Voltar</a>
+        </p>
+    </div> 
 {% endblock %}

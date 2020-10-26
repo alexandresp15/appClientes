@@ -1,9 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Cliente{% endblock %}
+{% block stylesheets %} 
+    <link href="{{ asset('css/table.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet"/>  
+{% endblock %}
 
 {% block body %}
-    <h1>Cliente</h1>
+    <h2>Cliente</h2>
 
     <table class="table">
         <tbody>
@@ -29,10 +33,11 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('cliente_index') }}">Voltar</a>
-
-    <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
-
-    {{ include('cliente/_delete_form.html.twig') }}
+    
+    <div class="link">
+        <a href="{{ path('cliente_index') }}">Voltar</a>
+        <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+    </div>
+    
+    
 {% endblock %}

@@ -1,4 +1,5 @@
 {{ form_start(form) }}
+    {{ form_row(form.nome, { 'label': 'Razão Social' }) }}
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Salvar') }}</button>
 {{ form_end(form) }}

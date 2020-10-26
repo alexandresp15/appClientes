@@ -1,0 +1,37 @@
+.formulario{
+    position: relative;
+    top: 0px;
+    width: 300px;   
+    padding: 18px 6% 15px 6%;
+    margin: 35px auto;
+    background: #f7f7f7;
+    border: 1px solid rgba(147, 184, 189,0.8);
+
+    border-radius: 5px;
+}
+
+.link {
+    background-color: #f7f7f7;
+    text-align: right;
+}
+
+.btn{ 
+    font-weight: bold;
+    font-size: 15px;
+    color: #4ab3c6;
+    background-color: transparent;
+    margin-bottom: 10px;
+    border: 1px solid #cbd518;
+    text-align: right;
+    border-radius: 4px;
+    transition: all 0.4s  linear;  
+}
+
+.btn:hover {
+    color: white;
+    background: #39bfd7;
+    border: 1px solid #4ab3c6;
+  } 
+
+
+
