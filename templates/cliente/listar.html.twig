@@ -24,8 +24,8 @@
                 <td>{{ cliente.cnpj }}</td>
                 <td>
                     <p class="bt">
-                        <a href="{{ path('cliente_show', {'id': cliente.id}) }}">Mostrar</a>
-                        <a href="{{ path('cliente_edit', {'id': cliente.id}) }}">Editar</a>
+                        <a href="{{ path('cliente_mostrar', {'id': cliente.id}) }}">Mostrar</a>
+                        <a href="{{ path('cliente_editar', {'id': cliente.id}) }}">Editar</a>
                     </p>
                 </td>
             </tr>
@@ -37,7 +37,7 @@
         </tbody>
     </table> 
     <p class="link">
-        <a href="{{ path('cliente_new') }}">Cadastrar</a>
+        <a href="{{ path('cliente_criar') }}">Cadastrar</a>
     </p>
 {% endblock %}
 
