@@ -8,7 +8,7 @@ O objetivo desde projeto é criar aplicação utilizado o padrão de arquitetura
 -  Linguagem de programação PHP 7.3.
 -  Framawork Sysmfony 5.0.
 
-![appCliente image](image/listarCliente.png)
+![appCliente image](image/listarCliente.PNG)
 
-![appCliente image](image/mostrarCliente.png)
-![appCliente image](image/criarCliente.png)
+![appCliente image](image/mostrarCliente.PNG)
+![appCliente image](image/criarCliente.PNG)
